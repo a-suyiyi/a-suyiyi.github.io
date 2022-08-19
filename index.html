@@ -3,7 +3,7 @@
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/cookie.js"></script>
     <script>
-        $.ready(function(){
+        var body_load=function(){
             var name=$.cookie("user");
             if(name!=null){
                 var img=createElement("img");
@@ -18,7 +18,7 @@
                 <a href="/login.html" class="link">登录</a>
                 ');
             }
-        });
+        }
     </script>
     <style>
         .userimage{
@@ -35,9 +35,10 @@
             width:100px;
         }
     </style>
+    <a href="/github_explorer.html">Github Explorer</a>
     <div class="userimage"></div>
 </head>
-<body>
+<body onload="body_load();">
     <div class="content">
 
     </div>
